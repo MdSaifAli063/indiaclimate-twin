@@ -210,11 +210,11 @@ export default function DigitalTwinMap() {
   );
 }
 
-function enrichGeoJSON(geo: GeoJSON.FeatureCollection) {
+function enrichGeoJSON(geo: FeatureCollection): FeatureCollection {
   const v = useClimateStore.getState().activeVariable;
   const s = useClimateStore.getState().scenario;
   const y = useClimateStore.getState().targetYear;
-  const features = geo.features.map((f, idx) => {
+  const features: Feature[] = geo.features.map((f, idx) => {
     const name = (f.properties as { name?: string })?.name ?? "";
     const stateData =
       CLIMATE_DATA.find((sd) => sd.geoName === name) ??

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import type { FeatureCollection, Feature } from "geojson";
 import maplibregl from "maplibre-gl";
 import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
 import { CLIMATE_DATA, getStateById } from "@/lib/climateData";

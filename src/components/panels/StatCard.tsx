@@ -62,7 +62,7 @@ export default function StatCard({ label, value, decimals = 1, unit, delta, tren
                       : "text-twin-muted"
                 }
               >
-                {trend === "up" ? "\u25B2" : trend === "down" ? "\u25BC" : "—"} {delta}
+                {trend === "up" ? "▲" : trend === "down" ? "▼" : "—"} {delta}
               </span>
               <span className="text-twin-muted">vs baseline</span>
             </div>

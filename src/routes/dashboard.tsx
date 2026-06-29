@@ -23,7 +23,7 @@ export const Route = createFileRoute("/dashboard")({
       {
         name: "description",
         content:
-          "Real-time digital twin of India\u2019s climate — satellite + ground fusion, AI projections, and sector-impact analysis across 36 states.",
+          "Real-time digital twin of India’s climate — satellite + ground fusion, AI projections, and sector-impact analysis across 36 states.",
       },
     ],
   }),

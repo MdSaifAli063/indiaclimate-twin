@@ -44,7 +44,7 @@ export function generateInsights(
     severity: Math.abs(rainDelta) > 15 ? "high" : "moderate",
     title:
       rainDelta < -10
-        ? `Monsoon deficit \u2212${Math.abs(rainDelta).toFixed(1)}%`
+        ? `Monsoon deficit −${Math.abs(rainDelta).toFixed(1)}%`
         : rainDelta > 10
           ? `Increased precipitation +${rainDelta.toFixed(1)}%`
           : `Rainfall relatively stable: ${rainDelta >= 0 ? "+" : ""}${rainDelta.toFixed(1)}%`,

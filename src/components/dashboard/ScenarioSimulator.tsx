@@ -40,7 +40,7 @@ export default function ScenarioSimulator() {
           <div>
             <div className="text-sm font-semibold text-twin-text">Climate scenario simulator</div>
             <div className="font-mono text-[10px] uppercase tracking-widest text-twin-muted">
-              Model India\u2019s climate future under different emission pathways
+              Model India’s climate future under different emission pathways
             </div>
           </div>
         </div>

@@ -9,10 +9,10 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "High-fidelity digital twin of India\u2019s climate system. ISRO satellite data + IMD ground networks + AI/ML modeling across 36 states.",
+          "High-fidelity digital twin of India’s climate system. ISRO satellite data + IMD ground networks + AI/ML modeling across 36 states.",
       },
       { property: "og:title", content: "ClimateTwin India" },
-      { property: "og:description", content: "AI-powered digital twin of India\u2019s climate." },
+      { property: "og:description", content: "AI-powered digital twin of India’s climate." },
     ],
   }),
   component: Landing,
@@ -90,12 +90,12 @@ export default function Landing() {
               Live · ISRO Hackathon 2025
             </div>
             <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl">
-              India\u2019s climate,
+              India’s climate,
               <br />
               <span className="text-glow text-twin-cyan">digitally replicated.</span>
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-[15px] leading-relaxed text-twin-muted">
-              A physics-informed AI twin of the subcontinent\u2019s atmosphere, oceans, and land surface —
+              A physics-informed AI twin of the subcontinent’s atmosphere, oceans, and land surface —
               built on geostationary satellites, polar-orbit imagery, 550+ ground stations, and 50-member
               ensemble assimilation. Explore current state, project to 2100, and stress-test policy
               interventions across every state and union territory.

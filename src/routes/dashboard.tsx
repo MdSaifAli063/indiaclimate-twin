@@ -44,9 +44,9 @@ function DashboardPage() {
       <Sidebar />
       <div className="flex min-w-0 flex-1 flex-col">
         <TopBar />
-        <main className="space-y-5 px-5 py-5">
+        <main className="space-y-5 px-5 py-5 scroll-smooth">
           {/* Row 1: stat cards */}
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-5">
+          <div id="section-overview" className="scroll-mt-20 grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-5">
             <StatCard
               label="Mean temperature"
               value={temp}
@@ -99,7 +99,7 @@ function DashboardPage() {
           </div>
 
           {/* Row 2: map + AI insights */}
-          <div className="grid grid-cols-1 gap-5 xl:grid-cols-3">
+          <div id="section-map" className="scroll-mt-20 grid grid-cols-1 gap-5 xl:grid-cols-3">
             <div className="xl:col-span-2">
               <div className="h-[560px]">
                 <DigitalTwinMap />
@@ -111,7 +111,7 @@ function DashboardPage() {
           </div>
 
           {/* Row 3: 3 charts */}
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          <div id="section-sectors" className="scroll-mt-20 grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div className="h-[320px]">
               <MonthlyTrendChart state={display} />
             </div>
@@ -125,19 +125,24 @@ function DashboardPage() {
 
           {/* Row 4: extremes + data status */}
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-            <div className="h-[480px]">
+            <div id="section-extremes" className="scroll-mt-20 h-[480px]">
               <ExtremesPanel />
             </div>
-            <div className="h-[480px]">
+            <div id="section-sources" className="scroll-mt-20 h-[480px]">
               <DataAssimilationPanel />
             </div>
           </div>
 
           {/* Row 5: simulator */}
-          <ScenarioSimulator />
+          <div id="section-scenarios" className="scroll-mt-20">
+            <ScenarioSimulator />
+          </div>
 
           {/* Row 6: regional comparison */}
-          <RegionCompareChart />
+          <div id="section-reports" className="scroll-mt-20">
+            <RegionCompareChart />
+          </div>
+
 
           <footer className="border-t border-twin-border pt-5 pb-2 text-center">
             <div className="font-mono text-[10px] uppercase tracking-widest text-twin-muted">

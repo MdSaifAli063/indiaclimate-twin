@@ -128,7 +128,7 @@ export default function DigitalTwinMap() {
                 <span style="font-family:'Space Mono';font-size:22px;color:#00f5ff;font-weight:700">${props.value.toFixed(1)}</span>
                 <span style="color:#7a9bb5;font-size:11px">${VARIABLE_META[useClimateStore.getState().activeVariable].unit}</span>
               </div>
-              <div style="margin-top:8px;font-size:10px;color:#7a9bb5;font-family:'Space Mono'">${sd?.dataSources.slice(0,3).join(" \u00b7 ") ?? ""}</div>
+              <div style="margin-top:8px;font-size:10px;color:#7a9bb5;font-family:'Space Mono'">${sd?.dataSources.slice(0,3).join(" · ") ?? ""}</div>
             </div>`,
           )
           .addTo(map);

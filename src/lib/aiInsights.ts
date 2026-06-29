@@ -30,11 +30,11 @@ export function generateInsights(
     title:
       projected > 35
         ? `Extreme heat regime by ${year}`
-        : `Warming trend +${tempDelta.toFixed(1)}\u00b0C by ${year}`,
+        : `Warming trend +${tempDelta.toFixed(1)}°C by ${year}`,
     body:
       projected > 35
-        ? `${state.name} projected mean ${projected.toFixed(1)}\u00b0C under ${SCENARIO_META[scenario].label} \u2014 ${tempDelta.toFixed(1)}\u00b0C above 30-yr baseline. Heat-stress mortality risk rises sharply.`
-        : `${state.name} mean temperature shifts to ${projected.toFixed(1)}\u00b0C, ${tempDelta.toFixed(1)}\u00b0C above the 1991\u20132020 climatological baseline under ${SCENARIO_META[scenario].label}.`,
+        ? `${state.name} projected mean ${projected.toFixed(1)}°C under ${SCENARIO_META[scenario].label} — ${tempDelta.toFixed(1)}°C above 30-yr baseline. Heat-stress mortality risk rises sharply.`
+        : `${state.name} mean temperature shifts to ${projected.toFixed(1)}°C, ${tempDelta.toFixed(1)}°C above the 1991–2020 climatological baseline under ${SCENARIO_META[scenario].label}.`,
   });
 
   // Rainfall
@@ -44,7 +44,7 @@ export function generateInsights(
     severity: Math.abs(rainDelta) > 15 ? "high" : "moderate",
     title:
       rainDelta < -10
-        ? `Monsoon deficit \u2212${Math.abs(rainDelta).toFixed(1)}%`
+        ? `Monsoon deficit −${Math.abs(rainDelta).toFixed(1)}%`
         : rainDelta > 10
           ? `Increased precipitation +${rainDelta.toFixed(1)}%`
           : `Rainfall relatively stable: ${rainDelta >= 0 ? "+" : ""}${rainDelta.toFixed(1)}%`,
@@ -52,7 +52,7 @@ export function generateInsights(
       rainDelta < -10
         ? `Significant rainfall reduction projected for the ${state.sectors.water.riverBasin} basin. Reservoir reliability and rabi sowing windows compressed.`
         : rainDelta > 10
-          ? `Intensification of monsoon over ${state.name}. Flood-plain exposure (${state.sectors.water.floodPlainArea.toLocaleString()} km\u00b2) elevates inundation risk.`
+          ? `Intensification of monsoon over ${state.name}. Flood-plain exposure (${state.sectors.water.floodPlainArea.toLocaleString()} km²) elevates inundation risk.`
           : `Total annual rainfall stays close to current ${state.current.rainfall} mm, but intra-seasonal variability increases.`,
   });
 
@@ -72,7 +72,7 @@ export function generateInsights(
     category: "extreme",
     severity: "high",
     title: `${main[0].toUpperCase() + main.slice(1)} risk elevated`,
-    body: `${state.name} extreme-event frequency rises ${(p.extremeEvents).toFixed(0)} events/yr by ${year} \u2014 driven by ${main === "cyclone" ? "Bay of Bengal SST +1.2\u00b0C and intensified low-pressure systems" : main === "flood" ? "compressed monsoon bursts and saturated catchments" : main === "drought" ? "weakened westerlies and reduced soil moisture" : "heat-dome circulations and stagnant air"}.`,
+    body: `${state.name} extreme-event frequency rises ${(p.extremeEvents).toFixed(0)} events/yr by ${year} — driven by ${main === "cyclone" ? "Bay of Bengal SST +1.2°C and intensified low-pressure systems" : main === "flood" ? "compressed monsoon bursts and saturated catchments" : main === "drought" ? "weakened westerlies and reduced soil moisture" : "heat-dome circulations and stagnant air"}.`,
   });
 
   // Sector (rotate based on biggest risk)
@@ -111,7 +111,7 @@ export function generateExtremeEvents(
       type: "flood",
       severity: "severe",
       title: `Flood warning: ${state.name}`,
-      description: `${state.sectors.water.riverBasin} basin running above danger mark. ${state.sectors.water.floodPlainArea.toLocaleString()} km\u00b2 flood-plain at risk over the next 72h.`,
+      description: `${state.sectors.water.riverBasin} basin running above danger mark. ${state.sectors.water.floodPlainArea.toLocaleString()} km² flood-plain at risk over the next 72h.`,
       probability: 78,
       source: "CWC",
       validUntil: week,
@@ -135,7 +135,7 @@ export function generateExtremeEvents(
       type: "drought",
       severity: state.sectors.agriculture.droughtRisk === "extreme" ? "severe" : "warning",
       title: `Drought ${state.sectors.agriculture.droughtRisk === "extreme" ? "warning" : "watch"}: ${state.name}`,
-      description: `Soil moisture at ${state.current.soilMoisture}% \u2014 below seasonal normal. Groundwater levels declining to ${state.current.groundwaterLevel}m below surface.`,
+      description: `Soil moisture at ${state.current.soilMoisture}% — below seasonal normal. Groundwater levels declining to ${state.current.groundwaterLevel}m below surface.`,
       probability: state.sectors.agriculture.droughtRisk === "extreme" ? 82 : 58,
       source: "IMD",
       validUntil: week,
@@ -147,7 +147,7 @@ export function generateExtremeEvents(
       type: "heatwave",
       severity: "warning",
       title: `Heatwave alert: ${state.name}`,
-      description: `Peak summer temperatures forecast to exceed 40\u00b0C. Heat-stress index ${state.sectors.health.heatStressIndex}/100 \u2014 vulnerable populations advised to limit exposure 11:00\u201316:00.`,
+      description: `Peak summer temperatures forecast to exceed 40°C. Heat-stress index ${state.sectors.health.heatStressIndex}/100 — vulnerable populations advised to limit exposure 11:00–16:00.`,
       probability: 71,
       source: "IMD",
       validUntil: tomorrow,
@@ -159,7 +159,7 @@ export function generateExtremeEvents(
       type: "glacier-retreat",
       severity: "watch",
       title: `Glacier retreat monitoring: ${state.name}`,
-      description: `Snow cover at ${state.current.snowCover}%. ${state.sectors.water.riverBasin} headwater glaciers losing 1.8\u20132.4 m water-equivalent annually per GRACE-FO observations.`,
+      description: `Snow cover at ${state.current.snowCover}%. ${state.sectors.water.riverBasin} headwater glaciers losing 1.8–2.4 m water-equivalent annually per GRACE-FO observations.`,
       probability: 88,
       source: "GRACE-FO",
       validUntil: week,
@@ -171,7 +171,7 @@ export function generateExtremeEvents(
       type: "fog",
       severity: state.current.aqi > 200 ? "severe" : "warning",
       title: `Air quality alert: ${state.name}`,
-      description: `AQI ${state.current.aqi} \u2014 ${state.current.aqi > 200 ? "very poor" : "poor"} category. Particulate pollution combined with low boundary-layer mixing.`,
+      description: `AQI ${state.current.aqi} — ${state.current.aqi > 200 ? "very poor" : "poor"} category. Particulate pollution combined with low boundary-layer mixing.`,
       probability: 92,
       source: "CPCB",
       validUntil: tomorrow,

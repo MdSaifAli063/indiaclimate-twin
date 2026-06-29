@@ -42,7 +42,7 @@ export default function AIInsightsPanel() {
           <div>
             <div className="text-sm font-semibold text-twin-text">AI climate intelligence</div>
             <div className="font-mono text-[10px] uppercase tracking-widest text-twin-muted">
-              Ensemble LSTM \u00b7 PINN \u00b7 50 members
+              Ensemble LSTM · PINN · 50 members
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function AIInsightsPanel() {
               <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-twin-cyan" />
               <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-twin-cyan [animation-delay:120ms]" />
               <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-twin-cyan [animation-delay:240ms]" />
-              <span className="ml-2 font-mono uppercase tracking-widest">Synthesizing\u2026</span>
+              <span className="ml-2 font-mono uppercase tracking-widest">Synthesizing…</span>
             </motion.div>
           ) : (
             <motion.div key="r" className="space-y-2.5">

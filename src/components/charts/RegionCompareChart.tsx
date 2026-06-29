@@ -41,7 +41,7 @@ export default function RegionCompareChart() {
               }}
             />
             <Legend wrapperStyle={{ fontSize: 10, fontFamily: "Space Mono" }} iconSize={8} />
-            <Bar dataKey="temperature" name="Temp \u00b0C" fill="#ff8c42" radius={[3, 3, 0, 0]} />
+            <Bar dataKey="temperature" name="Temp °C" fill="#ff8c42" radius={[3, 3, 0, 0]} />
             <Bar dataKey="rainfallScaled" name="Rain (mm/100)" fill="#0ea5e9" radius={[3, 3, 0, 0]} />
             <Bar dataKey="humidity" name="RH %" fill="#00d4aa" radius={[3, 3, 0, 0]} />
             <Bar dataKey="aqi" name="AQI/2" fill="#a78bfa" radius={[3, 3, 0, 0]} />

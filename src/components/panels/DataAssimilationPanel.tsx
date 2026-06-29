@@ -64,8 +64,8 @@ export default function DataAssimilationPanel() {
           <span className="text-twin-text">14:45 IST</span>
         </div>
         <div className="mt-1 flex items-center justify-between">
-          <span>Ensemble members \u00b7 cycles/day</span>
-          <span className="text-twin-text">50 \u00b7 96</span>
+          <span>Ensemble members · cycles/day</span>
+          <span className="text-twin-text">50 · 96</span>
         </div>
       </div>
     </div>

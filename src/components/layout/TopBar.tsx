@@ -20,7 +20,7 @@ export default function TopBar() {
               ClimateTwin <span className="text-twin-cyan">India</span>
             </div>
             <div className="font-mono text-[9px] uppercase tracking-widest text-twin-muted">
-              Digital twin \u00b7 v1.4.2
+              Digital twin · v1.4.2
             </div>
           </div>
         </Link>

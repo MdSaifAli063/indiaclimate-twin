@@ -40,12 +40,12 @@ export default function ScenarioSimulator() {
           <div>
             <div className="text-sm font-semibold text-twin-text">Climate scenario simulator</div>
             <div className="font-mono text-[10px] uppercase tracking-widest text-twin-muted">
-              Model India\u2019s climate future under different emission pathways
+              Model India’s climate future under different emission pathways
             </div>
           </div>
         </div>
         <div className="font-mono text-[10px] uppercase tracking-widest text-twin-muted">
-          {state ? state.name : "All India"} \u00b7 target {targetYear}
+          {state ? state.name : "All India"} · target {targetYear}
         </div>
       </div>
 
@@ -135,7 +135,7 @@ export default function ScenarioSimulator() {
         {/* Outputs */}
         <div className="space-y-3">
           <div className="grid grid-cols-2 gap-2.5">
-            <OutCard label="Temperature change" value={`${tempChange >= 0 ? "+" : ""}${tempChange}\u00b0C`} color="#ff4d2e" />
+            <OutCard label="Temperature change" value={`${tempChange >= 0 ? "+" : ""}${tempChange}°C`} color="#ff4d2e" />
             <OutCard label="Rainfall change" value={`${rainChange >= 0 ? "+" : ""}${rainChange}%`} color="#0ea5e9" />
             <OutCard label="Extreme events / yr" value={`+${extremes}`} color="#fbbf24" />
             <OutCard label="GDP climate risk" value={`-${gdpRisk}%`} color="#ff4d2e" />

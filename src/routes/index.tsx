@@ -5,27 +5,27 @@ import { CLIMATE_DATA, ZONE_COLORS } from "@/lib/climateData";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ClimateTwin India \u2014 AI-Powered Digital Twin of India's Climate" },
+      { title: "ClimateTwin India — AI-Powered Digital Twin of India's Climate" },
       {
         name: "description",
         content:
-          "High-fidelity digital twin of India\u2019s climate system. ISRO satellite data + IMD ground networks + AI/ML modeling across 36 states.",
+          "High-fidelity digital twin of India’s climate system. ISRO satellite data + IMD ground networks + AI/ML modeling across 36 states.",
       },
       { property: "og:title", content: "ClimateTwin India" },
-      { property: "og:description", content: "AI-powered digital twin of India\u2019s climate." },
+      { property: "og:description", content: "AI-powered digital twin of India’s climate." },
     ],
   }),
   component: Landing,
 });
 
 const TICKER = [
-  "Delhi 38.2\u00b0C \u2191",
+  "Delhi 38.2°C ↑",
   "Kerala rainfall 284mm this week",
   "Rajasthan AQI 156",
   "Ladakh glacier retreat 2.1m YTD",
-  "Bay of Bengal SST 29.8\u00b0C",
+  "Bay of Bengal SST 29.8°C",
   "Mumbai humidity 78%",
-  "Chennai cyclone watch \u2014 INCOIS",
+  "Chennai cyclone watch — INCOIS",
   "Punjab groundwater -28m",
   "Meghalaya 5000mm/yr",
   "Assam Brahmaputra +1.8m",
@@ -61,7 +61,7 @@ export default function Landing() {
           </Link>
           <div className="hidden items-center gap-3 md:flex">
             <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-twin-muted">
-              <span>ISRO</span><span>\u00b7</span><span>IMD</span><span>\u00b7</span><span>INCOIS</span>
+              <span>ISRO</span><span>·</span><span>IMD</span><span>·</span><span>INCOIS</span>
             </div>
           </div>
           <Link
@@ -87,15 +87,15 @@ export default function Landing() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-twin-cyan opacity-70" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-twin-cyan" />
               </span>
-              Live \u00b7 ISRO Hackathon 2025
+              Live · ISRO Hackathon 2025
             </div>
             <h1 className="text-balance text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl">
-              India\u2019s climate,
+              India’s climate,
               <br />
               <span className="text-glow text-twin-cyan">digitally replicated.</span>
             </h1>
             <p className="mt-5 max-w-xl text-pretty text-[15px] leading-relaxed text-twin-muted">
-              A physics-informed AI twin of the subcontinent\u2019s atmosphere, oceans, and land surface \u2014
+              A physics-informed AI twin of the subcontinent’s atmosphere, oceans, and land surface —
               built on geostationary satellites, polar-orbit imagery, 550+ ground stations, and 50-member
               ensemble assimilation. Explore current state, project to 2100, and stress-test policy
               interventions across every state and union territory.
@@ -148,7 +148,7 @@ export default function Landing() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-12 max-w-2xl">
             <div className="font-mono text-[10px] uppercase tracking-widest text-twin-cyan">
-              \u00a7 02 \u2014 Capabilities
+              § 02 — Capabilities
             </div>
             <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
               What the twin can do.
@@ -174,7 +174,7 @@ export default function Landing() {
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-twin-cyan">
-                \u00a7 03 \u2014 Explore
+                § 03 — Explore
               </div>
               <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
                 Every state and territory.
@@ -207,7 +207,7 @@ export default function Landing() {
                 </div>
                 <div className="mt-1 flex items-baseline gap-2">
                   <span className="font-mono text-base font-bold text-twin-cyan">
-                    {s.current.temperature}\u00b0
+                    {s.current.temperature}°
                   </span>
                   <span className="font-mono text-[11px] text-twin-muted">
                     {s.current.rainfall}mm
@@ -228,7 +228,7 @@ export default function Landing() {
       <footer className="mx-auto max-w-7xl px-6 py-10">
         <div className="flex flex-wrap items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-widest text-twin-muted">
           <div className="flex items-center gap-2">
-            <Activity className="h-3 w-3" /> ClimateTwin India \u00b7 ISRO Hackathon 2025
+            <Activity className="h-3 w-3" /> ClimateTwin India · ISRO Hackathon 2025
           </div>
           <div className="flex flex-wrap gap-4">
             <span>INSAT-3DR</span>
@@ -316,7 +316,7 @@ function HeroIllustration() {
         ))}
       </svg>
       {/* floating labels */}
-      <FloatingLabel className="left-[68%] top-[6%]" tag="Temperature" value="28.4\u00b0C" />
+      <FloatingLabel className="left-[68%] top-[6%]" tag="Temperature" value="28.4°C" />
       <FloatingLabel className="left-[2%] top-[28%]" tag="Rainfall" value="1240 mm" />
       <FloatingLabel className="left-[72%] top-[34%]" tag="Wind" value="14 km/h" />
       <FloatingLabel className="left-[4%] top-[64%]" tag="Soil moisture" value="42%" />

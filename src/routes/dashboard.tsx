@@ -19,11 +19,11 @@ import { projectedTemperature, projectedRainfall } from "@/lib/computeClimate";
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
-      { title: "Dashboard \u2014 ClimateTwin India" },
+      { title: "Dashboard — ClimateTwin India" },
       {
         name: "description",
         content:
-          "Real-time digital twin of India\u2019s climate \u2014 satellite + ground fusion, AI projections, and sector-impact analysis across 36 states.",
+          "Real-time digital twin of India\u2019s climate — satellite + ground fusion, AI projections, and sector-impact analysis across 36 states.",
       },
     ],
   }),
@@ -50,8 +50,8 @@ function DashboardPage() {
             <StatCard
               label="Mean temperature"
               value={temp}
-              unit="\u00b0C"
-              delta={`${(temp - display.current.temperature).toFixed(1)}\u00b0C`}
+              unit="°C"
+              delta={`${(temp - display.current.temperature).toFixed(1)}°C`}
               trend={temp > display.current.temperature ? "up" : "flat"}
               icon={<Thermometer className="h-4 w-4" />}
               accent="#ff8c42"
@@ -141,7 +141,7 @@ function DashboardPage() {
 
           <footer className="border-t border-twin-border pt-5 pb-2 text-center">
             <div className="font-mono text-[10px] uppercase tracking-widest text-twin-muted">
-              ClimateTwin India \u00b7 Built for ISRO Hackathon 2025 \u00b7 Data: INSAT-3DR, IMD, INCOIS, CWC, GRACE-FO, Bhuvan
+              ClimateTwin India · Built for ISRO Hackathon 2025 · Data: INSAT-3DR, IMD, INCOIS, CWC, GRACE-FO, Bhuvan
             </div>
           </footer>
         </main>

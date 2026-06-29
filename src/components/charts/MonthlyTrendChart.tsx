@@ -24,7 +24,7 @@ export default function MonthlyTrendChart({ state }: { state: StateClimateData }
         <div>
           <div className="text-sm font-semibold text-twin-text">Monthly climate profile</div>
           <div className="font-mono text-[10px] uppercase tracking-widest text-twin-muted">
-            {state.name} \u00b7 12-month
+            {state.name} · 12-month
           </div>
         </div>
         <div className="flex items-center gap-3 font-mono text-[10px]">

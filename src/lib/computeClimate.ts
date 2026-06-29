@@ -7,8 +7,8 @@ export const SCENARIO_META: Record<
   { label: string; full: string; color: string; multiplier: number; sub: string }
 > = {
   rcp26: { label: "RCP 2.6", full: "Aggressive mitigation", color: "#4f8df8", multiplier: 0.45, sub: "Peak 2020, net-zero 2070" },
-  rcp45: { label: "RCP 4.5", full: "Moderate mitigation", color: "#00d4aa", multiplier: 0.7, sub: "Stabilize at 4.5 W/m\u00b2" },
-  rcp60: { label: "RCP 6.0", full: "Weak mitigation", color: "#ff8c42", multiplier: 0.88, sub: "Stabilize at 6.0 W/m\u00b2" },
+  rcp45: { label: "RCP 4.5", full: "Moderate mitigation", color: "#00d4aa", multiplier: 0.7, sub: "Stabilize at 4.5 W/m²" },
+  rcp60: { label: "RCP 6.0", full: "Weak mitigation", color: "#ff8c42", multiplier: 0.88, sub: "Stabilize at 6.0 W/m²" },
   rcp85: { label: "RCP 8.5", full: "Business as usual", color: "#ff4d2e", multiplier: 1.0, sub: "Continued high emissions" },
 };
 
@@ -84,7 +84,7 @@ export const VARIABLE_META: Record<
   VariableType,
   { label: string; unit: string; short: string }
 > = {
-  temperature: { label: "Temperature", unit: "\u00b0C", short: "Temp" },
+  temperature: { label: "Temperature", unit: "°C", short: "Temp" },
   rainfall: { label: "Rainfall", unit: "mm", short: "Rain" },
   humidity: { label: "Humidity", unit: "%", short: "RH" },
   windSpeed: { label: "Wind Speed", unit: "km/h", short: "Wind" },

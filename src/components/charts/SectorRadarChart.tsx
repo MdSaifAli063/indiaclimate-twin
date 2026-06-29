@@ -37,7 +37,7 @@ export default function SectorRadarChart({ state }: { state: StateClimateData })
       <div className="mb-2">
         <div className="text-sm font-semibold text-twin-text">Sector vulnerability</div>
         <div className="font-mono text-[10px] uppercase tracking-widest text-twin-muted">
-          {state.name} \u00b7 today vs 2050
+          {state.name} · today vs 2050
         </div>
       </div>
       <div className="flex-1">

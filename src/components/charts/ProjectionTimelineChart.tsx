@@ -34,7 +34,7 @@ export default function ProjectionTimelineChart({
       <div className="mb-2">
         <div className="text-sm font-semibold text-twin-text">Temperature projection</div>
         <div className="font-mono text-[10px] uppercase tracking-widest text-twin-muted">
-          {state.name} \u00b7 \u0394\u00b0C from baseline \u00b7 2024\u20132100
+          {state.name} · Δ°C from baseline · 2024–2100
         </div>
       </div>
       <div className="flex-1">
